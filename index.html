@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SKINOWEAR® | Luxury Leather Apparels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#353534","secondary-container":"#af8d11",surface:"#131313","on-tertiary-fixed":"#2e1502","on-primary-container":"#757575","on-primary-fixed":"#1b1b1b","on-error-container":"#ffdad6","on-surface-variant":"#cfc4c5",secondary:"#e9c349","on-error":"#690005",tertiary:"#ecbd9d","surface-container":"#201f1f","inverse-surface":"#e5e2e1","on-secondary-container":"#342800","on-tertiary-container":"#946d51","surface-container-lowest":"#0e0e0e","on-secondary-fixed":"#241a00","inverse-primary":"#5e5e5e","secondary-fixed":"#ffe088","on-background":"#e5e2e1","surface-container-highest":"#353534","border-gold-low":"rgba(212,175,55,0.2)","primary-container":"#000000","on-tertiary-fixed-variant":"#603f27","surface-graphite":"#1A1A1A","outline-variant":"#4c4546","surface-bright":"#393939","tertiary-container":"#000000","surface-dim":"#131313","surface-container-high":"#2a2a2a","surface-tint":"#c6c6c6","primary-fixed-dim":"#c6c6c6",background:"#131313","on-primary":"#303030","on-tertiary":"#472913","secondary-fixed-dim":"#e9c349","text-off-white":"#F8F6F3","gallery-card":"#1e1e1e","on-surface":"#e5e2e1",error:"#ffb4ab","on-secondary":"#3c2f00","tertiary-fixed-dim":"#ecbd9d","surface-container-low":"#1c1b1b","primary-fixed":"#e2e2e2","inverse-on-surface":"#313030",primary:"#c6c6c6",outline:"#988e90","on-primary-fixed-variant":"#474747","error-container":"#93000a","on-secondary-fixed-variant":"#574500","glass-charcoal":"rgba(18,18,18,0.8)","tertiary-fixed":"#ffdcc5"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-desktop":"80px","stack-md":"16px","margin-mobile":"24px",gutter:"24px","stack-sm":"8px","section-gap":"160px","stack-lg":"32px"},fontFamily:{"display-lg":["Bodoni Moda"],"body-lg":["Hanken Grotesk"],"display-lg-mobile":["Bodoni Moda"],"subheader-caps":["Montserrat"],"body-md":["Hanken Grotesk"],"headline-md":["Bodoni Moda"],"label-sm":["Montserrat"]},fontSize:{"display-lg":["72px",{lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"1.6",fontWeight:"400"}],"display-lg-mobile":["44px",{lineHeight:"1.1",fontWeight:"600"}],"subheader-caps":["14px",{lineHeight:"1.5",letterSpacing:"0.2em",fontWeight:"600"}],"body-md":["16px",{lineHeight:"1.6",fontWeight:"400"}],"headline-md":["32px",{lineHeight:"1.2",fontWeight:"500"}],"label-sm":["12px",{lineHeight:"1.4",letterSpacing:"0.05em",fontWeight:"500"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer src="script.js"></script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary selection:text-background font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-white/95 backdrop-blur-xl rounded-full shadow-lg shadow-black/10 transition-all duration-500 ease-in-out">
+<div class="grid grid-cols-3 md:flex md:items-center md:justify-between px-6 md:px-8 py-3">
+<!-- Brand (col 1 on mobile, left on desktop) -->
+<a class="flex items-center justify-self-start md:justify-self-auto flex-shrink-0" href="#"><img alt="SKINOWEAR" class="h-10 w-auto" src="logo1.png"/></a>
+<!-- Toggle (col 2 center on mobile, hidden on desktop) -->
+<div class="flex md:hidden items-center justify-center">
+<button class="flex items-center text-gray-900 ml-2" onclick="toggleTheme()" title="Toggle theme">
+<div class="toggle-switch"><div class="toggle-thumb bg-white"></div></div>
+</button>
+</div>
+<!-- Hamburger (col 3 right on mobile, hidden on desktop) -->
+<button class="flex md:hidden items-center justify-self-end text-gray-900 hover:text-secondary transition-colors duration-400" id="menuToggle" onclick="toggleMenu()">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;" id="menuIcon">menu</span>
+</button>
+<!-- Desktop Links + Actions (hidden on mobile) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-subheader-caps text-subheader-caps text-gray-900 transition-all duration-500 ease-in-out" href="#home">Home</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 hover:text-secondary transition-colors duration-400" href="#about">About</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 hover:text-secondary transition-colors duration-400" href="#export">Export</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 hover:text-secondary transition-colors duration-400" href="#gallery">Gallery</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 hover:text-secondary transition-colors duration-400" href="#contact">Contact</a>
+<button class="flex items-center text-gray-900" onclick="toggleTheme()" title="Toggle theme">
+<div class="toggle-switch"><div class="toggle-thumb bg-white"></div></div>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="hidden md:hidden flex-col items-center gap-4 py-4 px-6 bg-white rounded-2xl shadow-lg absolute top-full left-0 right-0 mt-2" id="mobileMenu">
+<a class="font-subheader-caps text-subheader-caps text-gray-900 w-full text-center py-2" href="#home">Home</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 w-full text-center py-2" href="#about">About</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 w-full text-center py-2" href="#export">Export</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 w-full text-center py-2" href="#gallery">Gallery</a>
+<a class="font-subheader-caps text-subheader-caps text-gray-900 w-full text-center py-2" href="#contact">Contact</a>
+</div>
+</nav>
+<!-- Fullscreen Hero -->
+<header class="relative w-full h-screen flex items-center justify-center overflow-hidden" id="home">
+<div class="absolute inset-0 w-full h-full">
+<img alt="Hero" class="w-full h-full object-cover object-center opacity-60" src="bg-img.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-surface-graphite/40"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto flex flex-col items-center mt-20 reveal-up">
+<p class="font-subheader-caps text-subheader-caps text-secondary tracking-widest mb-stack-md uppercase">House Of Leather &amp; Apparels</p>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-text-off-white mb-stack-lg text-glow">Custom Leather Jackets.<br/>Crafted For You.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl">Handmade Genuine Leather | Custom Fit | Worldwide Shipping</p>
+<div class="flex flex-col sm:flex-row items-center gap-stack-md">
+<a class="bg-surface-variant text-text-off-white font-subheader-caps text-subheader-caps px-8 py-4 rounded-none hover:bg-secondary hover:text-surface-graphite border border-transparent hover:border-secondary transition-all duration-400 uppercase tracking-widest flex items-center gap-2" href="#gallery">
+                    View Our Work
+                    <span class="material-symbols-outlined text-[18px]">arrow_right_alt</span>
+</a>
+<a class="bg-transparent text-text-off-white font-subheader-caps text-subheader-caps px-8 py-4 rounded-none border border-outline-variant hover:border-secondary hover:text-secondary transition-all duration-400 uppercase tracking-widest" href="#about">
+                    Our Story
+                </a>
+</div>
+</div>
+<!-- Scroll indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Scroll</span>
+<div class="w-[1px] h-10 bg-outline-variant"></div>
+</div>
+</header>
+<!-- Craftsmanship Story -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-margin-desktop items-center">
+<div class="order-2 lg:order-1 reveal-up">
+<img alt="Artisan" class="w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 border border-surface-container-high" src="close_up_editorial_photography_of_a_master_leather_artisan_s_hands_at_work_in_a/screen.png"/>
+</div>
+<div class="order-1 lg:order-2 flex flex-col justify-center reveal-up">
+<p class="font-subheader-caps text-subheader-caps text-secondary tracking-widest mb-stack-md uppercase">Our Heritage</p>
+<h2 class="font-headline-md text-headline-md text-text-off-white mb-stack-lg">From Kolkata's Historic Tanneries to the World.</h2>
+<div class="space-y-stack-md font-body-lg text-body-lg text-on-surface-variant">
+<p>At SKINOWEAR®, we believe that leather is more than a material—it is a legacy of craftsmanship, character, and timeless style. Rooted in the rich leathercraft traditions of Kolkata, India, our atelier combines generations of artisanal expertise with contemporary luxury and dark-fashion aesthetics.</p>
+<p>From leather jackets, vests, and bags to wallets, belts, accessories, and bespoke leather goods, every piece is created with an uncompromising commitment to quality. Each hide is hand-selected, every stitch meticulously placed, and every hardware element carefully chosen to ensure durability, functionality, and elegance.</p>
+<p>We don't simply manufacture leather products; we craft enduring companions designed to age beautifully, develop a unique patina, and tell your story over time. Every SKINOWEAR® creation embodies authenticity, individuality, and the spirit of true craftsmanship.</p>
+<p>Built for those who appreciate timeless design and exceptional quality, SKINOWEAR® stands as a symbol of leather artistry, heritage, and modern sophistication.</p>
+</div>
+<div class="mt-stack-lg">
+<a class="inline-flex items-center gap-2 font-subheader-caps text-subheader-caps text-text-off-white hover:text-secondary transition-colors duration-400 uppercase tracking-widest border-b border-border-gold-low hover:border-secondary pb-1" href="#gallery">
+                        View Gallery
+                        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Export -->
+<section class="py-section-gap bg-surface-graphite relative overflow-hidden border-y border-surface-container-high" id="export">
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #c6c6c6 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="text-center max-w-4xl mx-auto mb-margin-desktop reveal-up">
+<p class="font-display-lg text-body-lg text-secondary italic tracking-wide mb-stack-sm">— Export —</p>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-text-off-white mb-stack-md leading-tight">Handcrafted in India<br/><span class="italic text-secondary">Worn Across the Globe</span></h2>
+<p class="font-display-lg text-body-lg text-on-surface-variant italic font-light">Our bespoke leather creations travel to discerning clients worldwide, from Europe to the Americas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter reveal-up">
+<div class="glass-panel p-stack-lg text-center rounded-lg border border-border-gold-low hover:border-secondary/40 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">travel_explore</span>
+<h3 class="font-display-lg text-headline-md text-text-off-white mb-stack-sm">Worldwide</h3>
+<p class="font-display-lg text-body-md text-on-surface-variant italic font-light">Exporting to over 50 countries across continents.</p>
+</div>
+<div class="glass-panel p-stack-lg text-center rounded-lg border border-border-gold-low hover:border-secondary/40 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">flag</span>
+<h3 class="font-display-lg text-headline-md text-text-off-white mb-stack-sm">Europe</h3>
+<p class="font-display-lg text-body-md text-on-surface-variant italic font-light">Premium clientele in Italy, England, and beyond.</p>
+</div>
+<div class="glass-panel p-stack-lg text-center rounded-lg border border-border-gold-low hover:border-secondary/40 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">handyman</span>
+<h3 class="font-display-lg text-headline-md text-text-off-white mb-stack-sm">Custom Design</h3>
+<p class="font-display-lg text-body-md text-on-surface-variant italic font-light">Every jacket is bespoke — tailored to your exact vision and fit.</p>
+</div>
+<div class="glass-panel p-stack-lg text-center rounded-lg border border-border-gold-low hover:border-secondary/40 transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">auto_awesome</span>
+<h3 class="font-display-lg text-headline-md text-text-off-white mb-stack-sm">Bespoke Craft</h3>
+<p class="font-display-lg text-body-md text-on-surface-variant italic font-light">Personalized design consultations for a one-of-a-kind piece.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto" id="gallery">
+<div class="text-center mb-margin-desktop reveal-up">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">collections</span>
+<div class="w-16 h-[1px] bg-secondary mx-auto mb-stack-md"></div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-text-off-white mb-stack-md">Our Collection</h2>
+<p class="font-display-lg text-body-lg text-on-surface-variant italic font-light max-w-2xl mx-auto">A curated selection of our finest leather jackets and bags — each piece a testament to uncompromising craftsmanship.</p>
+</div>
+<!-- Jackets -->
+<div class="mb-margin-desktop reveal-up">
+<div class="flex items-center gap-stack-md mb-stack-lg">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<h3 class="font-subheader-caps text-subheader-caps text-secondary uppercase tracking-widest">Leather Jackets</h3>
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 1" class="w-full h-80 md:h-96 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket1.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Classic Biker</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Full-grain cowhide</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 2" class="w-full h-80 md:h-96 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket2.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Flight Jacket</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Lambskin leather</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 3" class="w-full h-80 md:h-96 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket3.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Racer Jacket</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Vintage finish</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mt-gutter">
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 4" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket4.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Cafe Racer</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Distressed leather</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 5" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket5.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Bomber Jacket</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Nappa leather</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 6" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket6.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Field Jacket</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Waxed canvas &amp; leather</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Jacket 7" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="jacket7.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Double Rider</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Italian leather</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bags -->
+<div class="reveal-up">
+<div class="flex items-center gap-stack-md mb-stack-lg">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<h3 class="font-subheader-caps text-subheader-caps text-secondary uppercase tracking-widest">Leather Bags</h3>
+<div class="flex-1 h-[1px] bg-surface-container-high"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Bag 1" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="bag1.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Duffle Bag</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Full-grain leather</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Bag 2" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="bag2.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Messenger Bag</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Waxed finish</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Bag 3" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="bag3.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Backpack</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-stitched</p>
+</div>
+</div>
+</div>
+<div class="gallery-item group relative overflow-hidden rounded-lg bg-surface border border-surface-container-high hover:border-secondary/30 transition-all duration-500">
+<img alt="Bag 4" class="w-full h-72 object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="bag4.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute bottom-0 left-0 right-0 p-stack-md translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+<div class="glass-panel p-stack-sm rounded-lg">
+<p class="font-subheader-caps text-subheader-caps text-text-off-white tracking-widest uppercase">Tote Bag</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Saffiano leather</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="relative w-full min-h-screen flex items-center justify-center overflow-hidden border-y border-surface-container-high py-section-gap" id="contact">
+<div class="absolute inset-0 w-full h-full">
+<img alt="World Map" class="w-full h-full object-cover opacity-10" src="a_luxury_world_map_with_a_dark_minimalist_aesthetic._subtle_gold_lines/screen.png"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/95 via-[#0f0f0f]/90 to-background/95"></div>
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.03)_0%,transparent_70%)]"></div>
+</div>
+<div class="relative z-10 w-full">
+<div class="w-full px-margin-mobile max-w-6xl mx-auto">
+<div class="text-center mb-margin-desktop reveal-up">
+<span class="material-symbols-outlined text-secondary/80 text-5xl mb-stack-sm" style="font-variation-settings: 'wght' 200;">mail</span>
+<div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-secondary to-transparent mx-auto mb-stack-md"></div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-headline-md md:text-headline-md text-text-off-white mb-stack-md tracking-tight">Get In Touch</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto font-light leading-relaxed">For bespoke inquiries, collaboration opportunities, or simply to share your vision — we're always listening.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-gutter items-start">
+<!-- Left: Contact Info -->
+<div class="md:col-span-2 space-y-stack-md">
+<div class="contact-card glass-panel p-stack-lg rounded-lg border-l-2 border-secondary/60">
+<div class="flex items-center gap-stack-md mb-stack-sm">
+<div class="icon-cell"><span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">location_on</span></div>
+<h3 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest">Address</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" style="padding-left: 60px;">1st Floor, 35/J/1, Topsia Rd<br/>Opposite Asma Restaurant, Spring Gali<br/>Topsia, Kolkata, West Bengal 700039</p>
+</div>
+<div class="contact-card glass-panel p-stack-lg rounded-lg border-l-2 border-secondary/60">
+<div class="flex items-center gap-stack-md mb-stack-sm">
+<div class="icon-cell"><span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">email</span></div>
+<h3 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest">Email</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" style="padding-left: 60px;">
+<a class="hover:text-secondary transition-colors duration-400" href="mailto:skinowearofficial@gmail.com">skinowearofficial@gmail.com</a>
+</p>
+</div>
+<div class="contact-card glass-panel p-stack-lg rounded-lg border-l-2 border-secondary/60">
+<div class="flex items-center gap-stack-md mb-stack-sm">
+<div class="icon-cell"><span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">call</span></div>
+<h3 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest">Phone</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" style="padding-left: 60px;">
+<a class="hover:text-secondary transition-colors duration-400" href="tel:+917044447055">+91 7044447055</a>
+</p>
+</div>
+<div class="contact-card glass-panel p-stack-lg rounded-lg border-l-2 border-secondary/60">
+<div class="flex items-center gap-stack-md mb-stack-sm">
+<div class="icon-cell"><span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">globe</span></div>
+<h3 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest">Follow Us / Join</h3>
+</div>
+<div style="padding-left: 60px;">
+<div class="flex gap-stack-sm mt-stack-xs">
+<a class="w-11 h-11 border border-outline-variant/60 flex items-center justify-center rounded-xl hover:border-secondary/50 hover:text-secondary hover:bg-secondary/5 transition-all duration-400 text-on-surface-variant" href="https://www.instagram.com/skinowear.in?igsh=MTA4Nm4xbDZob2Ixcw%3D%3D" target="_blank"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+<a class="w-11 h-11 border border-outline-variant/60 flex items-center justify-center rounded-xl hover:border-[#25D366]/50 hover:text-[#25D366] hover:bg-[#25D366]/5 transition-all duration-400 text-on-surface-variant" href="https://whatsapp.com/channel/0029Vb6HY5QLNSa6ZW7PTb1D" target="_blank"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Form -->
+<div class="md:col-span-3">
+<div class="glass-panel p-stack-lg md:p-margin-desktop border border-border-gold-low rounded-lg">
+<div class="flex items-center gap-stack-md mb-stack-lg">
+<div class="w-10 h-[1px] bg-gradient-to-r from-secondary/60 to-secondary"></div>
+<span class="font-subheader-caps text-subheader-caps text-secondary uppercase tracking-widest">Send a Message</span>
+<div class="flex-1 h-[1px] bg-gradient-to-r from-secondary/10 to-transparent"></div>
+</div>
+<form id="contactForm" onsubmit="sendViaGmail(event)" class="space-y-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="group">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-stack-xs block" for="name">Full Name <span class="text-secondary">*</span></label>
+<input class="form-input w-full bg-surface/50 border border-outline-variant/60 px-stack-md py-stack-sm text-text-off-white font-body-md text-body-md placeholder-on-surface-variant/60 focus:border-secondary focus:outline-none rounded-lg" id="name" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-stack-xs block" for="email">Email <span class="text-secondary">*</span></label>
+<input class="form-input w-full bg-surface/50 border border-outline-variant/60 px-stack-md py-stack-sm text-text-off-white font-body-md text-body-md placeholder-on-surface-variant/60 focus:border-secondary focus:outline-none rounded-lg" id="email" name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="group">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-stack-xs block" for="phone">Phone</label>
+<input class="form-input w-full bg-surface/50 border border-outline-variant/60 px-stack-md py-stack-sm text-text-off-white font-body-md text-body-md placeholder-on-surface-variant/60 focus:border-secondary focus:outline-none rounded-lg" id="phone" name="phone" placeholder="+91 98765 43210" type="tel"/>
+</div>
+<div class="group">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-stack-xs block" for="inquiry">Inquiry Type</label>
+<select class="form-input w-full bg-surface/50 border border-outline-variant/60 px-stack-md py-stack-sm text-text-off-white font-body-md text-body-md focus:border-secondary focus:outline-none rounded-lg appearance-none cursor-pointer" id="inquiry" name="inquiry">
+<option class="bg-[#1a1a1a] text-on-surface-variant" value="" disabled="" selected="">Select type</option>
+<option class="bg-[#1a1a1a] text-text-off-white" value="Custom Order">Custom Order</option>
+<option class="bg-[#1a1a1a] text-text-off-white" value="General Inquiry">General Inquiry</option>
+<option class="bg-[#1a1a1a] text-text-off-white" value="Collaboration">Collaboration</option>
+<option class="bg-[#1a1a1a] text-text-off-white" value="Press">Press</option>
+<option class="bg-[#1a1a1a] text-text-off-white" value="Other">Other</option>
+</select>
+</div>
+</div>
+<div class="group">
+<div class="flex justify-between items-center mb-stack-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest block" for="message">Message <span class="text-secondary">*</span></label>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70" id="charCount">0 / 1000</span>
+</div>
+<textarea class="form-input w-full bg-surface/50 border border-outline-variant/60 px-stack-md py-stack-sm text-text-off-white font-body-md text-body-md placeholder-on-surface-variant/60 focus:border-secondary focus:outline-none min-h-[120px] resize-y rounded-lg" id="message" name="message" maxlength="1000" placeholder="Tell us about your vision, preferences, fit requirements..." required=""></textarea>
+</div>
+<button class="btn-primary w-full bg-secondary text-surface-graphite font-subheader-caps text-subheader-caps py-3.5 rounded-lg hover:bg-transparent hover:text-secondary border border-secondary transition-all duration-500 uppercase tracking-widest flex items-center justify-center gap-2 group" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-500 group-hover:translate-x-1" style="font-variation-settings: 'wght' 200;">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Map (full width) -->
+<div class="w-full mt-gutter px-margin-mobile md:px-margin-desktop max-w-6xl mx-auto">
+<div class="glass-panel p-0 rounded-none border-x-0 border-border-gold-low overflow-hidden relative">
+<div class="absolute top-0 left-0 right-0 z-10 flex items-center gap-stack-sm px-margin-mobile md:px-margin-desktop py-stack-sm bg-gradient-to-b from-background/80 to-transparent pointer-events-none">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings:'wght'300;">location_on</span>
+<span class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest text-xs">Find Us</span>
+</div>
+<iframe allowfullscreen="" class="w-full h-72 md:h-96" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.045917032238!2d88.383616!3d22.537258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771e0e0e0e0f%3A0x0!2zMjLCsDMyJzE0LjIiTiA4OMKwMjMnMDEuMCJF!5e0!3m2!1sen!2sin!4v1" style="border:0;" title="SKINOWEAR Location"></iframe>
+<div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background/80 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface w-full bg-surface-container-low border-t border-surface-container-high mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-2">
+<a class="inline-block" href="#"><img alt="SKINOWEAR" class="h-8 md:h-10 w-auto brightness-0 invert footer-logo" src="logo1.png"/></a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-stack-sm mb-stack-lg">House Of Leather &amp; Apparels.<br/>1st Floor, 35/J/1, Topsia Rd, Spring Gali<br/>Topsia, Kolkata, West Bengal 700039</p>
+<div class="flex gap-stack-md">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded-lg hover:border-secondary hover:text-secondary transition-colors text-on-surface-variant" href="https://www.instagram.com/skinowear.in?igsh=MTA4Nm4xbDZob2Ixcw%3D%3D" target="_blank">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+</div>
+</div>
+<div>
+<h4 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest mb-stack-md">Explore</h4>
+<ul class="space-y-stack-sm font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#home">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">About</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#export">Export</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#gallery">Gallery</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-subheader-caps text-subheader-caps text-text-off-white uppercase tracking-widest mb-stack-md">Contact</h4>
+<ul class="space-y-stack-sm font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="mailto:skinowearofficial@gmail.com">skinowearofficial@gmail.com</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="tel:+917044447055">+91 7044447055</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="https://www.instagram.com/skinowear.in?igsh=MTA4Nm4xbDZob2Ixcw%3D%3D" target="_blank">Instagram</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="https://whatsapp.com/channel/0029Vb6HY5QLNSa6ZW7PTb1D" target="_blank">WhatsApp Channel</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-surface-container-high px-margin-mobile md:px-margin-desktop py-stack-md flex flex-col md:flex-row justify-between items-center text-label-sm font-label-sm text-on-surface-variant max-w-[1440px] mx-auto uppercase tracking-widest">
+<p>© 2024 SKINOWEAR®. ALL RIGHTS RESERVED.</p>
+<p class="mt-2 md:mt-0">Designed in Kolkata</p>
+</div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all duration-300 animate-bounce" href="https://wa.me/917044447055" target="_blank" title="Chat on WhatsApp">
+<svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl hidden items-center justify-center" id="lightbox" onclick="closeLightbox(event)">
+<button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-10" onclick="closeLightbox()">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings:'wght'200;">close</span>
+</button>
+<button class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10" id="lightboxPrev" onclick="event.stopPropagation();navigateLightbox(-1)">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings:'wght'200;">chevron_left</span>
+</button>
+<button class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10" id="lightboxNext" onclick="event.stopPropagation();navigateLightbox(1)">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings:'wght'200;">chevron_right</span>
+</button>
+<div class="max-w-[90vw] max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+<img alt="Lightbox" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" id="lightboxImg"/>
+</div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-sm font-body-md text-body-md tracking-widest uppercase" id="lightboxCounter"></div>
+</div>
+</body></html>
